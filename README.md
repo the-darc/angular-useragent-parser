@@ -1,10 +1,11 @@
+[![Bower version](https://badge.fury.io/bo/angular-useragent-parser.svg)](http://badge.fury.io/bo/angular-useragent-parser)
 # angular-useragent-parser
 AngularJS Constant for dependency injection of UAParser.js (whithout registering it in the global scope)
 
 ## Bower install
 
 ```sh
-$ bower install ua-parser-js
+$ bower install angular-useragent-parser
 ```
 
 ## License
