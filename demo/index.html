@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular User Agent Parser</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+	<script src="../release/angular-useragent-parser.js"></script>
+	<script>
+		angular.module('exampleApp', ['angular-useragent-parser'])
+		.controller('ExampleCtrl', ['$scope', 'UAParser', function($scope, UAParser){
+			$scope.localUA = new UAParser();
+
+			$scope.customUA = '';
+			$scope.localBrowserData = new UAParser();
+			$scope.$watch('customUA', function() {
+				$scope.localBrowserData.setUA($scope.customUA);
+			}, true);
+		}]);
+	</script>
+</head>
+<body ng-app="exampleApp" style="padding: 0.5em 2em;">
+	<div ng-controller="ExampleCtrl">
+		<h1>Angular UserAgent Parser</h1>
+		<p>
+			An AngularJS Constant for dependency injection of <a href="https://github.com/faisalman/ua-parser-js">UAParser.js</a>.<br>
+			<em>Whithout registering it in the global scope</em>
+		</p>
+
+		<h2>Your browser data</h2>
+		<div style="max-width: 500px; white-space: pre-wrap; padding: 1em; font-family: monospace; background-color: #F8F8F8;">{{localUA.getResult() | json : 4}}</div>
+
+		<h2>Custom user-agent parser</h2>
+		<div>
+			<label>Input userAgent: </label>
+			<input type='text' ng-model="customUA"/>
+		</div>
+		<pre style="max-width: 500px; white-space: pre-wrap; padding: 1em; font-family: monospace; background-color: #F8F8F8;">{{localBrowserData.getResult() | json : 4}}</pre>
+
+	</div>
+</body>
+</html>
