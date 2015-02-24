@@ -1,12 +1,30 @@
 [![Bower version](https://badge.fury.io/bo/angular-useragent-parser.svg)](http://badge.fury.io/bo/angular-useragent-parser)
 # angular-useragent-parser
-AngularJS Constant for dependency injection of UAParser.js (whithout registering it in the global scope)
+AngularJS Constant for dependency injection of [UAParser.js](https://github.com/faisalman/ua-parser-js) whithout registering it in the global scope.
 
 ## Bower install
 
 ```sh
 $ bower install angular-useragent-parser
 ```
+
+## How to use
+
+1. Import the ```angular-useragent-parser.min.js``` script in your page.
+
+2. Include the module ```angular-useragent-parser``` in your angular app.
+
+3. Use the AUParser Constant in your code:
+
+```javascript
+angular.module('exampleApp', ['angular-useragent-parser'])
+.controller('ExampleCtrl', ['$scope', 'UAParser', function($scope, UAParser){
+	var uaParser = new UAParser();
+	$scope.customUA = uaParser.getResult();
+}]);
+```
+
+_See example in [demo code](https://github.com/the-darc/angular-useragent-parser/blob/master/demo/index.html)_
 
 ## License
 
