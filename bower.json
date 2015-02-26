@@ -22,7 +22,7 @@
     "package.json",
     "gulpfile.js"
   ],
-  "dependencies": {
+  "devDependencies": {
     "ua-parser-js": "^0.7.3"
   }
 }
