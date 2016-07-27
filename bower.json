@@ -1,6 +1,6 @@
 {
   "name": "angular-useragent-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/the-darc/angular-useragent-parser",
   "authors": [
     "the-darc <darc.tec@gmail.com>"
@@ -23,6 +23,6 @@
     "gulpfile.js"
   ],
   "devDependencies": {
-    "ua-parser-js": "^0.7.3"
+    "ua-parser-js": "^0.7.10"
   }
 }
