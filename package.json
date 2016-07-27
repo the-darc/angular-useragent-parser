@@ -1,6 +1,6 @@
 {
   "name": "angular-useragent-parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AngularJS Constant for dependency injection of UAParser.js (whithout registering it in the global scope)",
   "main": "index.js",
   "scripts": {
